@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package qa_bert;
+
+message Question {
+    string context = 1;
+    string question = 2;
+}
+
+message Answer {
+    string answer = 1;
+}
+
+service QABERT {
+    rpc qa_bert(Question) returns (Answer) {}
+}
